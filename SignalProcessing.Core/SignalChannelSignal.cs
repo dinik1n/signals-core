@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SignalProcessing.Core
 {
-    internal class SignalChannelSignal
+    public class SignalChannelSignal
     {
         public SignalChannelSignal(float freq, float[] value)
         {

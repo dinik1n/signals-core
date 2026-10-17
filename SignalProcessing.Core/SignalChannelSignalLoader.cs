@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SignalProcessing.Core
 {
-    static class SignalChannelSignalLoader
+    public class SignalChannelSignalLoader
     {
         static public SignalChannelSignal Load(string filePath)
         {
