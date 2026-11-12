@@ -11,12 +11,12 @@ namespace SignalProcessing.Core
 {
     public class SignalChannelSignalWriter
     {
-        static public void Write(SignalChannelSignal obj, string filePath)
+        static public void Write(SingleChannelSignal signal, string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine(obj.Freq);
-                foreach(double element in obj.Value)
+                writer.WriteLine(signal.Frequency);
+                foreach(double element in signal.Data)
                 {
                     writer.WriteLine(element);
                 }

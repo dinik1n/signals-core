@@ -44,8 +44,8 @@
     <Compile Include="OfflineFilter.cs" />
     <Compile Include="OnlineFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignalChannelSignal.cs" />
-    <Compile Include="SignalChannelSignalLoader.cs" />
+    <Compile Include="SingleChannelSignal.cs" />
+    <Compile Include="SignalChannelSignalReader.cs" />
     <Compile Include="SignalChannelSignalWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

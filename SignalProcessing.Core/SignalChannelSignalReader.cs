@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace SignalProcessing.Core
 {
-    public class SignalChannelSignalLoader
+    public class SignalChannelSignalReader
     {
-        static public SignalChannelSignal Load(string filePath)
+        static public SingleChannelSignal Read(string filePath)
         {
 
             using (StreamReader reader = new StreamReader(filePath))
@@ -24,7 +24,7 @@ namespace SignalProcessing.Core
                     value.Add(float.Parse(line));
                 }
                 float[] arrSignal = value.ToArray();
-                SignalChannelSignal data = new SignalChannelSignal(freq, arrSignal);
+                SingleChannelSignal data = new SingleChannelSignal(freq, arrSignal);
                 return data;
             }
 

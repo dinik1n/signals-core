@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SignalProcessing.Core
 {
-    public class OfflineFilter
+    public static class OfflineFilter
     {
         static public float[] Filter(float[] data, int windowSize)
         {
@@ -25,6 +25,11 @@ namespace SignalProcessing.Core
             //return newSignal;
             // Расширяем сигнал в начале и конце дублированием первого и последнего значений
             // Проверка входных параметров
+
+            if (windowSize <= 0 || windowSize % 2 == 0)
+                throw new ArgumentOutOfRangeException(nameof(windowSize),
+                    "Размер окна должен быть положительным и нечётным.");
+
             int M = (windowSize - 1) / 2;
 
             // Создаём расширенный массив с дублированием крайних значений
