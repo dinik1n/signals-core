@@ -14,13 +14,15 @@ namespace SignalProcessing.Core
 
             using (StreamReader reader = new StreamReader(filePath))
             {
+                string first = reader.ReadLine();
+                if (first == null) throw new InvalidDataException("Файл пуст.");
                 float freq = (float.Parse(reader.ReadLine()));
+                if (freq <= 0)
+                    throw new InvalidDataException("Строка 1: частота должна быть положительной.");
                 List<float> value = new List<float>();
-                while (true)
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    string line = reader.ReadLine();
-                    if (line == null)
-                        break;
                     value.Add(float.Parse(line));
                 }
                 float[] arrSignal = value.ToArray();

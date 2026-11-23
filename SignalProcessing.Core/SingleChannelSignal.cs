@@ -12,7 +12,9 @@ namespace SignalProcessing.Core
         public SingleChannelSignal(float frequency, float[] data)
         {
             Frequency = frequency;
+            if (!(frequency > 0)) throw new ArgumentOutOfRangeException(nameof(frequency));
             Data = data;
+            if (data == null) throw new ArgumentNullException(nameof(data));
         }
         public float Frequency { get; }
         public float[] Data { get; }
