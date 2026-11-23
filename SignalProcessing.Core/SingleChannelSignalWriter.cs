@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,12 @@ namespace SignalProcessing.Core
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine(signal.Frequency);
+                writer.WriteLine(signal.Frequency.ToString(CultureInfo.InvariantCulture));
                 foreach(double element in signal.Data)
                 {
-                    writer.WriteLine(element);
+                    writer.WriteLine(element.ToString(CultureInfo.InvariantCulture));
                 }
-                
             }
-
         }
     }
 }

@@ -8,17 +8,19 @@ namespace SignalProcessing.Core
 {
     public static class SignalOperations
     {
-        // поэлементная сумма сигналов
         public static SingleChannelSignal Sum(IReadOnlyList<SingleChannelSignal> signals)
         {
-            if (signals == null|| signals.Count == 0 )
+            if (signals == null)
             {
-                throw new ArgumentNullException("signals = 0 или содержит 0", nameof(signals));
+                throw new ArgumentNullException("signals = 0", nameof(signals));
+            }
+            if (signals.Count == 0)
+            {
+                throw new ArgumentException("signals.Count == 0", nameof(signals));
             }
             foreach (SingleChannelSignal s in signals)
                 if (s == null)
-                    throw new ArgumentException("Список содержит null.",nameof(signals));
-
+                    throw new ArgumentNullException("Список содержит null.",nameof(signals));
 
             float freq = signals.First().Frequency;
 
@@ -44,7 +46,6 @@ namespace SignalProcessing.Core
 
             return new SingleChannelSignal(freq, summ_signals);
         }
-        // последовательная склейка сигналов в порядке следования в списке
         public static SingleChannelSignal Concat(IReadOnlyList<SingleChannelSignal> signals)
         {
             if (signals == null || signals.Count == 0)
