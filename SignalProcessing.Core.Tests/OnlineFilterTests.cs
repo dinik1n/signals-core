@@ -75,5 +75,42 @@ namespace SignalProcessing.Core.Tests
         [InlineData(-1)]
         public void Constructor_InvalidWindowSize_Throws(int windowSize)
             => Assert.Throws<ArgumentOutOfRangeException>(() => new OnlineFilter(windowSize));
+
+        [Fact] //------------------------------------------------------------Тест 31
+        public void Reset_ThenNewSignal_EqualsNewFilter()
+        {
+            var filter = new OnlineFilter(3);
+            filter.Filter(new float[] { 9, 8, 7, 6 });
+            filter.Reset();
+            float[] signal = { 1, 2, 3, 4, 5 };
+            AssertSignal.Equal(new OnlineFilter(3).Filter(signal), filter.Filter(signal));
+        }
+
+        [Fact] //------------------------------------------------------------Тест 32
+        public void Filter_Window1_EqualsInput()
+        {
+            float[] data = { 3, -1, 4, 1, 5 };
+            AssertSignal.Equal(data, new OnlineFilter(1).Filter(data));
+        }
+
+        [Fact] //------------------------------------------------------------Тест 33
+        public void Filter_LongSignal_MatchesDoubleReference()
+        {
+            const int w = 7;
+            var random = new Random(42);
+            var data = new float[200000];
+            for (int i = 0; i < data.Length; i++)
+                data[i] = 900f + (float)random.NextDouble() * 200f;
+
+            float[] actual = new OnlineFilter(w).Filter(data);
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                double sum = 0;
+                for (int k = i - w + 1; k <= i; k++)
+                    sum += data[Math.Max(k, 0)];
+                Assert.True(Math.Abs(sum / w - actual[i]) <= 1e-3, "Индекс " + i);
+            }
+        }
     }
 }

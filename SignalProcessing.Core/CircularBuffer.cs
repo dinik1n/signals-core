@@ -3,10 +3,9 @@
 public sealed class CircularBuffer<T>
 {
     private readonly T[] _items;
-    private int _start;   // ячейка самого старого элемента
+    private int _start;
     private int _count;
 
-    /// <exception cref="ArgumentOutOfRangeException">capacity не положительна.</exception>
     public CircularBuffer(int capacity)
     {
         if (capacity <= 0) throw new ArgumentOutOfRangeException(nameof(capacity));
@@ -26,12 +25,11 @@ public sealed class CircularBuffer<T>
         }
         else
         {
-            _items[_start] = item;                       // затираем самый старый
+            _items[_start] = item;
             _start = (_start + 1) % _items.Length;
         }
     }
 
-    /// <exception cref="ArgumentOutOfRangeException">index &lt; 0 или index ≥ Count.</exception>
     public T this[int index]
     {
         get
