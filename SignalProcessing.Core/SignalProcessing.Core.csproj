@@ -44,6 +44,7 @@
     <Compile Include="CircularBuffer.cs" />
     <Compile Include="ConstantGenerator.cs" />
     <Compile Include="ConstantParameters.cs" />
+    <Compile Include="CrossingDirection.cs" />
     <Compile Include="GeneratorParameters.cs" />
     <Compile Include="ISignalGenerator.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
@@ -55,7 +56,9 @@
     <Compile Include="SamplingParameters.cs" />
     <Compile Include="SawGenerator.cs" />
     <Compile Include="SawParameters.cs" />
+    <Compile Include="SignalAnalysisResult.cs" />
     <Compile Include="SignalGeneratorFactory.cs" />
+    <Compile Include="SignalMarker.cs" />
     <Compile Include="SignalOperations.cs" />
     <Compile Include="LineParameters.cs" />
     <Compile Include="NoiseParameters.cs" />
