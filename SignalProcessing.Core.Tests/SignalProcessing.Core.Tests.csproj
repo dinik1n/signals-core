@@ -134,6 +134,7 @@
     <Compile Include="CircularBufferTests.cs" />
     <Compile Include="ConstantGeneratorTests.cs" />
     <Compile Include="LineGeneratorTests.cs" />
+    <Compile Include="MarkerTests.cs" />
     <Compile Include="MedianFilterTests.cs" />
     <Compile Include="NoiseGeneratorTests.cs" />
     <Compile Include="OfflineFilterTests.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="SignalOperationsTests.cs" />
     <Compile Include="SineGeneratorTests.cs" />
     <Compile Include="SingleChannelSignalTests.cs" />
+    <Compile Include="ThresholdAnalyzerTests.cs" />
     <Compile Include="TriangleGeneratorTests.cs" />
   </ItemGroup>
   <ItemGroup>
