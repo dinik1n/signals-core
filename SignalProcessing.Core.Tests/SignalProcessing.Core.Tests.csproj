@@ -139,6 +139,7 @@
     <Compile Include="OnlineFilterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResamplerTests.cs" />
+    <Compile Include="SawGeneratorTests.cs" />
     <Compile Include="SignalGeneratorFactoryTests.cs" />
     <Compile Include="SamplingParametersTests.cs" />
     <Compile Include="SignalFileTests.cs" />

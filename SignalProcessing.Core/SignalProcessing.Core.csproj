@@ -51,6 +51,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resampler.cs" />
     <Compile Include="SamplingParameters.cs" />
+    <Compile Include="SawGenerator.cs" />
+    <Compile Include="SawParameters.cs" />
     <Compile Include="SignalGeneratorFactory.cs" />
     <Compile Include="SignalOperations.cs" />
     <Compile Include="LineParameters.cs" />

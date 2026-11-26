@@ -34,6 +34,11 @@ namespace SignalProcessing.Core
                         triangle.Period,
                         triangle.Phase,
                         triangle.Amplitude);
+                case SawParameters saw:
+                    return new SawGenerator(
+                        saw.Period,
+                        saw.Phase,
+                        saw.Amplitude);
 
                 default:
                     throw new NotSupportedException(
