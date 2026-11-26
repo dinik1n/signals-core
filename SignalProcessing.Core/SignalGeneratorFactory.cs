@@ -39,6 +39,9 @@ namespace SignalProcessing.Core
                         saw.Period,
                         saw.Phase,
                         saw.Amplitude);
+                case ConstantParameters constant:
+                    return new ConstantGenerator(
+                        constant.Value);
 
                 default:
                     throw new NotSupportedException(
