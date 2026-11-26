@@ -47,6 +47,7 @@
     <Compile Include="CrossingDirection.cs" />
     <Compile Include="GeneratorParameters.cs" />
     <Compile Include="ISignalGenerator.cs" />
+    <Compile Include="MarkerDetectedEventArgs.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
     <Compile Include="OfflineFilter.cs" />
     <Compile Include="OnlineFilter.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="SingleChannelSignal.cs" />
     <Compile Include="SingleChannelSignalReader.cs" />
     <Compile Include="SingleChannelSignalWriter.cs" />
+    <Compile Include="ThresholdAnalyzer.cs" />
     <Compile Include="TriangleGenerator.cs" />
     <Compile Include="TriangleParameters.cs" />
   </ItemGroup>
