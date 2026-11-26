@@ -145,6 +145,7 @@
     <Compile Include="SignalOperationsTests.cs" />
     <Compile Include="SineGeneratorTests.cs" />
     <Compile Include="SingleChannelSignalTests.cs" />
+    <Compile Include="TriangleGeneratorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

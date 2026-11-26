@@ -29,6 +29,12 @@ namespace SignalProcessing.Core
                     return new NoiseGenerator(
                         noise.Range);
 
+                case TriangleParameters triangle:
+                    return new TriangleGenerator(
+                        triangle.Period,
+                        triangle.Phase,
+                        triangle.Amplitude);
+
                 default:
                     throw new NotSupportedException(
                         $"Неподдерживаемый тип: {parameters.GetType().Name}");
