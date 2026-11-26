@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircularBuffer.cs" />
+    <Compile Include="GeneratorParameters.cs" />
     <Compile Include="ISignalGenerator.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
     <Compile Include="OfflineFilter.cs" />
@@ -51,6 +52,12 @@
     <Compile Include="Resampler.cs" />
     <Compile Include="SamplingParameters.cs" />
     <Compile Include="SignalOperations.cs" />
+    <Compile Include="LineParameters.cs" />
+    <Compile Include="NoiseParameters.cs" />
+    <Compile Include="NoiseGenerator.cs" />
+    <Compile Include="LineGenerator.cs" />
+    <Compile Include="SineGenerator.cs" />
+    <Compile Include="SineParameters.cs" />
     <Compile Include="SingleChannelSignal.cs" />
     <Compile Include="SingleChannelSignalReader.cs" />
     <Compile Include="SingleChannelSignalWriter.cs" />
