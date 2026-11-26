@@ -42,16 +42,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircularBuffer.cs" />
+    <Compile Include="ConstantGenerator.cs" />
+    <Compile Include="ConstantParameters.cs" />
+    <Compile Include="GeneratorParameters.cs" />
+    <Compile Include="ISignalGenerator.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
     <Compile Include="OfflineFilter.cs" />
     <Compile Include="OnlineFilter.cs" />
     <Compile Include="OnlineMedianFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resampler.cs" />
+    <Compile Include="SamplingParameters.cs" />
+    <Compile Include="SawGenerator.cs" />
+    <Compile Include="SawParameters.cs" />
+    <Compile Include="SignalGeneratorFactory.cs" />
     <Compile Include="SignalOperations.cs" />
+    <Compile Include="LineParameters.cs" />
+    <Compile Include="NoiseParameters.cs" />
+    <Compile Include="NoiseGenerator.cs" />
+    <Compile Include="LineGenerator.cs" />
+    <Compile Include="SineGenerator.cs" />
+    <Compile Include="SineParameters.cs" />
     <Compile Include="SingleChannelSignal.cs" />
     <Compile Include="SingleChannelSignalReader.cs" />
     <Compile Include="SingleChannelSignalWriter.cs" />
+    <Compile Include="TriangleGenerator.cs" />
+    <Compile Include="TriangleParameters.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
