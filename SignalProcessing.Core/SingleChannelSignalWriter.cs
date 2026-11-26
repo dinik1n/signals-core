@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,20 +10,18 @@ using System.Windows;
 
 namespace SignalProcessing.Core
 {
-    public class SignalChannelSignalWriter
+    public class SingleChannelSignalWriter
     {
-        static public void Write(SignalChannelSignal obj, string filePath)
+        static public void Write(SingleChannelSignal signal, string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine(obj.Freq);
-                foreach(double element in obj.Value)
+                writer.WriteLine(signal.Frequency.ToString(CultureInfo.InvariantCulture));
+                foreach(double element in signal.Data)
                 {
-                    writer.WriteLine(element);
+                    writer.WriteLine(element.ToString(CultureInfo.InvariantCulture));
                 }
-                
             }
-
         }
     }
 }
