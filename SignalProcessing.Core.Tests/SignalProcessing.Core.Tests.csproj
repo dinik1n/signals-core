@@ -147,6 +147,7 @@
     <Compile Include="SignalOperationsTests.cs" />
     <Compile Include="SineGeneratorTests.cs" />
     <Compile Include="SingleChannelSignalTests.cs" />
+    <Compile Include="ThresholdAnalyzerTests.cs" />
     <Compile Include="TriangleGeneratorTests.cs" />
   </ItemGroup>
   <ItemGroup>
