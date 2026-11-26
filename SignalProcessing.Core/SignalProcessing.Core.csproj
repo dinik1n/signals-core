@@ -47,7 +47,9 @@
     <Compile Include="CrossingDirection.cs" />
     <Compile Include="GeneratorParameters.cs" />
     <Compile Include="ISignalGenerator.cs" />
+    <Compile Include="MarkerCounter.cs" />
     <Compile Include="MarkerDetectedEventArgs.cs" />
+    <Compile Include="MarkerIntervalAnalyzer.cs" />
     <Compile Include="OfflineMedianFilter.cs" />
     <Compile Include="OfflineFilter.cs" />
     <Compile Include="OnlineFilter.cs" />
